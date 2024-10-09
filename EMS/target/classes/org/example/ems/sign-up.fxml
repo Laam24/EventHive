@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ems.SignupController">
+    <left>
+        <AnchorPane prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: #263F73;" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="AppName" alignment="CENTER" layoutX="30.0" layoutY="180.0" prefHeight="62.0" prefWidth="191.0" text="EventHive" textFill="WHITE">
+                    <font>
+                        <Font name="Calibri Bold Italic" size="31.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+                <Label fx:id="AppDex" alignment="CENTER" layoutX="30.0" layoutY="253.0" prefHeight="17.0" prefWidth="191.0" text="Book, Participate, Enjoy !!" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold" size="13.0" />
+                    </font>
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Label>
+                <Line endX="81.0" layoutX="124.0" layoutY="242.0" startX="-79.0" stroke="WHITE" />
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="500.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox alignment="CENTER" layoutX="25.0" layoutY="20.0" spacing="15.0">
+                    <children>
+                        <Label fx:id="signupMessageLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="400.0" textFill="RED" />
+                        <TextField fx:id="FirstNameText" promptText="First Name" />
+                        <TextField fx:id="LastNameText" promptText="Last Name" />
+                        <TextField fx:id="UsernameText" promptText="Username" />
+                        <TextField fx:id="EmailText" promptText="Email" />
+                        <TextField fx:id="ContactNumberText" promptText="Contact Number" />
+                        <PasswordField fx:id="PasswordText" promptText="Password" />
+                        <PasswordField fx:id="ConfirmPasswordText" promptText="Confirm Password" />
+                        <Button fx:id="SignupButton" mnemonicParsing="false" onAction="#signupButtonOnAction" style="-fx-background-color: #263F73;" text="Sign Up" textFill="WHITE" />
+                        <Button fx:id="BackToLogin" mnemonicParsing="false" onAction="#backToLoginOnAction" style="-fx-background-color: #263F73;" text="Back to Login" textFill="WHITE" />
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
